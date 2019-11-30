@@ -1,0 +1,31 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      Authentication
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-item-divider
+    style="height: 25%;background-color:#2699FB ;">
+        <ion-item style="margin: auto;">
+            <img src="../../assets/icon/LogoSC.png" height="90px" width="100px"/>
+        </ion-item>
+    </ion-item-divider>
+  <div class="container">
+    <form (ngSubmit)="logForm()">
+        <ion-item>    
+            <ion-label position="floating" style="font-size: 14px; color: #2699FB;"><ion-icon name="person" style="font-size: small;"></ion-icon> Matricule</ion-label> 
+            <ion-input type="text" [(ngModel)]="todo.user" name="user"></ion-input>
+        </ion-item>
+          <ion-item>
+            <ion-label position="floating"  style="font-size: 14px; color: #2699FB;"><ion-icon name="lock" style="font-size: small;"></ion-icon> Mot de passe</ion-label> 
+            <ion-input type="password" [(ngModel)]="todo.password" name="password"></ion-input>
+          </ion-item>
+          <div class="ion-padding" style="margin-top: 20px;">
+            <ion-button expand="block" type="submit" style="font-size: 11px;font-family: Audiowide" class="custom">CONNEXION</ion-button>
+          </div>     
+      </form>
+    </div>
+</ion-content>

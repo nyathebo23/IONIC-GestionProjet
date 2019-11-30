@@ -6,4 +6,21 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <form [formGroup]="todo" (ngSubmit)="logForm()">
+    <ion-item>
+      <ion-icon name="user"></ion-icon>
+      <ion-label position="floating">Matricule</ion-label>
+      <ion-input type="text" formControlName="title"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-icon name="password"></ion-icon>
+      <ion-label position="floating">Mot de passe</ion-label>
+      <ion-input type="password" formControlName="description"></ion-input>
+    </ion-item>
+      <div class="ion-padding">
+        <ion-button expand="block" type="submit" class="ion-no-margin">Create account</ion-button>
+      </div>
+   
+  </form>
+</ion-content>
