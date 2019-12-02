@@ -1,0 +1,32 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>
+      Authentication
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="background">
+    <ion-item-divider
+    style="height: 25%;">
+          <img src="../../../assets/images/im.jpg"/>      
+    </ion-item-divider>
+  <div class="container">
+    <form (ngSubmit)="logForm()">
+        <ion-item>    
+            <ion-label position="floating" style="font-size: 13px; color: #355e7e;"><ion-icon name="person"></ion-icon> Matricule</ion-label> 
+            <ion-input type="text" [(ngModel)]="employe.matricule" name="matricule"></ion-input>
+        </ion-item>
+          <ion-item>
+            <ion-label position="floating" style="font-size: 13px; color: #355e7e;"><ion-icon name="lock"></ion-icon> Mot de passe</ion-label> 
+            <ion-input type="password" [(ngModel)]="employe.password" name="password"></ion-input>
+          </ion-item>
+          <div class="ion-padding" >
+            <ion-button color="primary" expand="block" style="margin-top: 20px;font-size: 11px;" type="submit">CONNEXION</ion-button>
+          </div>  
+          <ion-item routerLink="/passforget" style="float:right;font-size: 11px;color: #355e7e;margin-top: -15px;">
+            Mot de passe oublié ?
+          </ion-item>   
+      </form>
+    </div>
+</ion-content>
